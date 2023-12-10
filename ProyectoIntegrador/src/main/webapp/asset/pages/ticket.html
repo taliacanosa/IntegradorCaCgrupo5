@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styleTicket.css">
+</head>
+<body>
+    <header class="gridHeader">
+        <h2>Conf. Bs As</h2>
+        <nav>
+            <a href="https://manganielloemiliano.github.io/codoAcodo/">La conferencia</a>
+            <a href="#oradores">Los oradores</a>
+            <a href="#lugar">Lugar y fecha</a>
+            <a href="#convert">Conviértete en orador</a>
+            <a id="ticket" href="./asset/pages/ticket.html">Comprar ticket</a>
+        </nav>
+    </header>
+    <main>
+        <section class="card-section">
+            <div class="card">
+                <h4>Estudiante</h4>
+                <p>Tienen un descuento</p>
+                <p>80%</p>
+                <p>Presentar documentación</p>
+            </div>
+            <div class="card">
+                <h4>Trainee</h4>
+                <p>Tienen un descuento</p>
+                <p>50%</p>
+                <p>Presentar documentación</p>
+            </div>
+            <div class="card">
+                <h4>Junior</h4>
+                <p>Tienen un descuento</p>
+                <p>15%</p>
+                <p>Presentar documentación</p>
+            </div>
+        </section>
+        <form action="cargaForm.jsp" method="post" class="formulario">
+	        <section class="ticket-section">
+	            <h1>Valor de ticket $200</h1>
+	            
+	        
+		            <label for="nombre"></label>
+		            <input type="text" id="nombre" name="nombre" placeholder="nombre">
+		
+		            <label for="apellido"></label>
+		            <input type="text" id="apellido" name="apellido" placeholder="apellido">
+		
+		            <label for="correo"></label>
+		            <input type="email" id="correo" name="correo" placeholder="correo ">
+		
+		            <p id="idcantidad" >Cantidad:</p>
+		            <input type="number" id="cantidad" name="cantidad" placeholder="Ingrese la cantidad de boletos">
+		
+		            <p id="idcategoria">Categoría:</p>
+		            <select id="categoria" name="categoria">
+		                <option value="Estudiante">Estudiante</option>
+		                <option value="Trainee">Trainee</option>
+		                <option value="Junior">Junior</option>
+		            </select>
+		
+		            <p id="totalApagar">Total a pagar:</p>
+		            <input type="text" id="total" name="total" readonly >
+		
+		            <button id="borrar" type="reset">Borrar</button>
+		            <button id="resumen" type="button">Validar</button>
+		            <button id="comprar"type="submit">Comprar</button>
+		         
+	           
+	        </section>
+	        </form>
+    </main>
+
+    <footer class="footergrid">
+        <nav>
+            <a href="">Preguntas frecuentes</a>
+            <a href="">Contáctanos</a>
+            <a href="">Prensa</a>
+            <a href="">Conferencias</a>
+            <a href="">Términos y condicones</a>
+            <a href="">Privacidad</a>
+            <a href="">Estudiantes</a>
+        </nav>
+    </footer>
+    
+
+    <script src="../js/app.js"></script>   
+</body>
+</html>

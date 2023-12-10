@@ -1,0 +1,214 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bgColor: rgb(52,58,64);
+    --bgColorFooter:#204C66;
+    --textColor: white;
+    --colorBtn: #29A744;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.gridHeader {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: auto 1fr;
+   
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    align-items: center;
+}
+
+.gridHeader h2 {
+    margin: 0;
+}
+
+.gridHeader nav {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    
+    grid-gap: 10px;
+    
+    align-items: center;
+}
+
+.gridHeader a {
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+    
+}
+
+.gridHeader a:hover {
+    color: #4CAF50;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.gridHeader {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    align-items: center;
+}
+
+.card-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    width: 80%;
+    max-width: 1200px;
+    margin-top: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   
+    
+    border: 1px solid #4CAF50;
+    padding: 20px;
+    text-align: center;
+    width: 60%;
+    height: 20vh;
+}
+
+.card h4 {
+    margin: 0;
+}
+
+.ticket-section {
+    
+    
+    padding: 20px;
+    text-align: center;
+    width: 80%;
+    height: 60vh;
+    max-width: 1200px;
+    display: grid;
+    grid-template-areas:
+        "title title title title"
+        "name name surname surname"
+        "email email email email"
+        "idquantity idquantity idcategoria idcategoria"
+        "quantity quantity category category"
+        "idtotal idtotal idtotal idtotal"
+        "total total total total"
+        "delete summary comprar comprar";
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+h1 {
+    grid-area: title;
+    font-size: 24px;
+    margin: 0;
+}
+
+input[type="text"][id="nombre"] {
+    grid-area: name;
+}
+
+input[type="text"][id="apellido"] {
+    grid-area: surname;
+}
+
+input[type="email"][id="correo"] {
+    grid-area: email;
+}
+
+p[id="idcantidad"] {
+    grid-area: idquantity;
+}
+
+input[type="number"][id="cantidad"] {
+    grid-area: quantity;
+}
+
+p[id="idcategoria"] {
+    grid-area: idcategoria;
+}
+p[id="total"] {
+    grid-area: idtotal;
+}
+select[id="categoria"] {
+    grid-area: category;
+}
+
+input[type="text"][id="total"] {
+    grid-area: total;
+    background-color: rgb(142, 181, 227);
+}
+
+button[id="borrar"] {
+    grid-area: delete;
+}
+
+button[id="resumen"] {
+    grid-area: summary;
+}
+
+button[id="comprar"] {
+    grid-area: comprar;
+}
+
+
+
+.footergrid {
+    position: sticky;
+    bottom:  0;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    
+    background-color: var(--bgColorFooter);
+    color: var(--textColor);
+    padding: 10px;
+    align-items: center;
+}
+
+.footergrid nav {
+    grid-column:1/8;
+  
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    
+    grid-gap: 10px;
+    align-items: center;
+}
+
+.footergrid a {
+    text-decoration: none;
+    color: var(--textColor);
+    text-align: center;
+    padding: 10px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.footergrid a:hover {
+    color: var(--colorBtn);
+}
